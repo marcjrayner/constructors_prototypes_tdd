@@ -22,6 +22,12 @@ Decorator.prototype.checkEnoughPaint = function (room) {
   };
 };
 
-
+Decorator.prototype.paintRoom = function (room) {
+  if (this.checkEnoughPaint(room)) {
+    room.paintRoom()
+  } else {
+    return 'Not Enough Paint'
+  };
+};
 
 module.exports = Decorator;
